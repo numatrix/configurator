@@ -14,7 +14,7 @@ COPY Matrix.Agent.Configurator.Model/Matrix.Agent.Configurator.Model.csproj Matr
 COPY . .
 
 # restore
-RUN dotnet restore "Matrix.Agent.Configurator/Matrix.Agent.Configurator.csproj"
+RUN dotnet restore "Matrix.Agent.Configurator/Matrix.Agent.Configurator.csproj" -s http://nuget.matrix.paramg.com:8888/v3/index.json
 
 # build
 WORKDIR /src/Matrix.Agent.Configurator
